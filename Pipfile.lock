@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "26c18476541404a5a65383ac5a47697904dd5260186a56cff6fca665f5149260"
+            "sha256": "e599229e51d1969c8833f22908613e55d1fd532e72dcf88f4358ff192fe26168"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -84,6 +84,17 @@
                 "sha256:e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"
             ],
             "version": "==2.21"
+        },
+        "sounddevice": {
+            "hashes": [
+                "sha256:4fcf587ed461b3c1451c9574985781e56ec8db6538a97533b8a320ff61740bee",
+                "sha256:66bb36220f6cf280d5f8937c68568a0181690c47e49c5081fa060e25a6daf875",
+                "sha256:6907cd03ff93afa5a1c8851b8d4dd361bc15e0edefba4d5c5b46bf09b4979709",
+                "sha256:6cad07e0e9212448a8573f9777abd94b656597d03c14caec4952e97b99d7dbd9",
+                "sha256:f690f5aa418a56268c7bdbc97d697c85add0134c5c79d44b8a2ad7a1b85da789"
+            ],
+            "index": "pypi",
+            "version": "==0.4.4"
         },
         "vosk": {
             "hashes": [

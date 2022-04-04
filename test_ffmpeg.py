@@ -5,6 +5,7 @@ import sys
 import os
 import wave
 import subprocess
+import json
 
 SetLogLevel(0)
 
@@ -21,13 +22,18 @@ process = subprocess.Popen(['ffmpeg', '-loglevel', 'quiet', '-i',
                             '-ar', str(sample_rate) , '-ac', '1', '-f', 's16le', '-'],
                             stdout=subprocess.PIPE)
 
+previousData = ""
+finalData = ""
 while True:
     data = process.stdout.read(4000)
     if len(data) == 0:
         break
     if rec.AcceptWaveform(data):
-        print(rec.Result())
+        result = json.loads(rec.Result())["text"]
+        print(result)
     else:
-        print(rec.PartialResult())
+        partialResult = json.loads(rec.PartialResult())["partial"]
+        print(partialResult, end="\r")
+        # finalData += result
 
-print(rec.FinalResult())
+# print(finalData)

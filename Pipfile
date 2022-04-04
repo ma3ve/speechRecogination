@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 vosk = "*"
 ffmpeg = "*"
+sounddevice = "*"
 
 [dev-packages]
 
